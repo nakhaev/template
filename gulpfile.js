@@ -1,15 +1,32 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var cssMin = require('gulp-clean-css');
-var injectString = require('gulp-inject-string');
+var injectCSS = require('gulp-inject-css');
+var browserSync = require('browser-sync').create();
 
 //less preprocessing
 gulp.task('less', function() {
-    return gulp.src('source/style/**/*.less')
+    return gulp.src('source/style/less/**/*.less')
             .pipe(less())
-            .pipe(gulp.dest('dist'));
+            .pipe(cssMin())
+            .pipe(gulp.dest('source/style/css'));
 })
 
-// gulp.task('less', function() {
-//     return
-// })
+//inject styles
+gulp.task('inject', function(){
+    gulp.src('source/index.html')
+        .pipe(injectCSS())
+        .pipe(gulp.dest('dist'))
+        browserSync.reload();
+});
+
+//watch and reload
+gulp.task('default', ['less', 'inject'], function () {
+    browserSync.init({
+        server: {
+            baseDir: "./dist"
+        }
+    });
+
+    gulp.watch('source/**/*.*', ['less','inject']);
+});
