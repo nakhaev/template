@@ -6,7 +6,7 @@ var browserSync = require('browser-sync').create();
 
 //less preprocessing
 gulp.task('less', function() {
-    return gulp.src('source/style/less/**/*.less')
+    return gulp.src('source/style/less/main.less')
             .pipe(less())
             .pipe(cssMin())
             .pipe(gulp.dest('source/style/css'));
