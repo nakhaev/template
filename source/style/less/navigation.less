@@ -1,0 +1,18 @@
+#navigation {
+    .nav-list {
+        padding: 5px;
+        margin: 0;
+        .nav-item {
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            a, a:active, a:visited, a:focus {
+                text-decoration: none;
+                color: @primary;
+            }
+            &.active {
+                border-bottom: 3px solid @danger;
+            }
+        }
+    }
+}

@@ -12,3 +12,9 @@ Base template of web interface for controllers based on STM32 32-bit ARM Cortex 
 ### To start
 1. open console in "template" folder
 2. Enter: gulp - to start local server
+3. Press: CTRL+C - to stop local server
+
+### To create production version
+1. open console in "template" folder
+2. Enter: gulp build - to create production version
+3. You will found production version in "dist" folder
