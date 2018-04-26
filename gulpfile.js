@@ -35,7 +35,7 @@ gulp.task('build', ['del', 'less', 'injectCSS'], function() {
 
 //watch less changes
 gulp.task('less:watch', function() {
-  gulp.watch('source/style/less/*.less' , ['less']);
+  gulp.watch('source/style/less/**/*.less' , ['less']);
 });
 
 //watch and reload

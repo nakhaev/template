@@ -1,0 +1,46 @@
+//mixin
+.button-generator(@name, @bg-color, @color) {
+    &.btn-@{name}, &.btn-@{name}:visited {
+        // .primary-bg-grad;
+        background: @bg-color;
+        color: @color;
+        &:hover {
+            background: darken(@bg-color, 10%);
+        }
+        &:active {
+            border: none;
+            background: lighten(@bg-color, 10%);
+        }
+    }
+}
+
+* {
+    .btn {
+        margin: 3px;
+        border: none;
+        outline: none;
+        .border-radius(3px);
+        text-transform: uppercase;
+        &.btn-small {
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+        &.btn-medium {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+        &.btn-large {
+            font-size: 16px;
+            padding: 12px 24px;
+        }
+        &.btn-block {
+            display: block;
+            width: 100%;
+        }
+    }
+    .button-generator(primary, @primary-bg-color, @white);
+    .button-generator(danger, @danger-bg-color, @white);
+    .button-generator(success, @success-bg-color, @white);
+    .button-generator(regular, @regular-bg-color, @white);
+    .button-generator(link, @link-bg-color, @white);
+}
