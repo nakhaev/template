@@ -1,0 +1,32 @@
+//mixin
+.floated-generator(@name, @width) {
+    .floated-@{name} {
+        float: left;
+        width: @width;
+    }
+}
+
+.floated {
+    float: left;
+}
+.floated-generator(10, 10%);
+.floated-generator(20, 20%);
+.floated-generator(30, 30%);
+.floated-generator(40, 40%);
+.floated-generator(50, 50%);
+.floated-generator(60, 60%);
+.floated-generator(70, 70%);
+.floated-generator(80, 80%);
+.floated-generator(90, 90%);
+.floated-generator(100, 100%);
+
+
+
+
+.clearfix {
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
