@@ -1,0 +1,54 @@
+aside {
+    position: fixed;
+    @media (orientation: landscape) { position: absolute; }
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 10000;
+    background: darken(@main-bg-color, 5%);
+    label[for="action-menu-toggle"] {
+        position: absolute;
+        top: 50vh;
+        margin-top: -18px;
+        right: -22px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid @white;
+        background: @main-bg-color;
+        .cilcle {
+            width: 4px;
+            height: 4px;
+            margin: 5px 0 4px 20px;
+            border: 1px solid @danger;
+            border-radius: 50%;
+            content: '.';
+            &:nth-child(even) {
+                margin: 5px 0 4px 25px;
+            }
+        }
+    }
+    #action-menu-toggle {
+        visibility: hidden;
+        margin-left: -20px;
+        &:checked + .action-menu {
+            width: 150px;
+            padding: 0 10px 0 5px;
+        }
+    }
+    .action-menu {
+        transition: width 1s ease;
+        list-style: none;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background: darken(@main-bg-color, 5%);
+        button {
+            white-space: nowrap;
+        }
+    }
+}

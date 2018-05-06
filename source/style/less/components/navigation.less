@@ -3,6 +3,7 @@
         padding: 5px;
         margin: 0;
         .nav-item {
+            position: relative;
             display: inline-block;
             text-transform: uppercase;
             padding: 8px 10px;
@@ -10,8 +11,25 @@
                 text-decoration: none;
                 color: @primary;
             }
-            &.active {
+            &.active:after {
+                width: calc(~'100% + 2px');
+                left: -2px;
+            }
+            &:after {
+                display: block;
+                position: absolute;
+                // left: -2px;
+                left: 50%;
+                width: 0;
+                bottom: 0;
+                height: 3px;
+                content: '';
                 border-bottom: 3px solid @danger;
+                transition: all 0.3s ease;
+            }
+            &:hover:after {
+                width: calc(~'100% + 2px');
+                left: -2px;
             }
         }
     }
