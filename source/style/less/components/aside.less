@@ -1,31 +1,31 @@
-aside {
+.aside {
     position: fixed;
     @media (orientation: landscape) { position: absolute; }
     top: 0;
-    bottom: 0;
-    min-height: 100vh;
     left: 0;
-    padding: 0;
+    bottom: 0;
     margin: 0;
+    padding: 0;
     z-index: 10000;
+    min-height: 100vh;
     background: darken(@main-bg-color, 5%);
     label[for="action-menu-toggle"] {
-        position: absolute;
         top: 50vh;
-        margin-top: -18px;
+        width: 40px;
         right: -22px;
         height: 40px;
-        width: 40px;
-        border-radius: 50%;
+        margin-top: -18px;
+        position: absolute;
+        .border-radius(50%);
         border: 1px solid @white;
         background: @main-bg-color;
         .cilcle {
             width: 4px;
             height: 4px;
+            content: '.';
+            .border-radius(50%);
             margin: 5px 0 4px 20px;
             border: 1px solid @danger;
-            border-radius: 50%;
-            content: '.';
             &:nth-child(even) {
                 margin: 5px 0 4px 25px;
             }
@@ -40,12 +40,12 @@ aside {
         }
     }
     .action-menu {
-        transition: width 1s ease;
-        list-style: none;
         width: 0;
-        padding: 0;
         margin: 0;
+        padding: 0;
         overflow: hidden;
+        list-style: none;
+        transition: width 0.5s ease;
         background: darken(@main-bg-color, 5%);
         button {
             white-space: nowrap;

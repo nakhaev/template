@@ -19,6 +19,8 @@
         margin: 3px;
         border: none;
         outline: none;
+        cursor: pointer;
+        text-align: center;
         .border-radius(3px);
         text-transform: uppercase;
         &.btn-small {
@@ -35,6 +37,7 @@
         }
         &.btn-block {
             display: block;
+            padding: 4px 0;
             width: 100%;
         }
     }
@@ -44,3 +47,10 @@
     .button-generator(regular, @regular-bg-color, @white);
     .button-generator(link, @link-bg-color, @white);
 }
+// a.btn {
+//     text-align: center;
+//     &.btn-block {
+//         display: block;
+//         width: auto;
+//     }
+// }
