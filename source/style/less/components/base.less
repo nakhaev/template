@@ -1,11 +1,23 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, sans-serif;
     color: @white;
+    font-size: 14px;
 }
 
 html {
     background: @main-bg-color;
     position: relative;
+}
+
+#main {
+    padding-bottom: 30px;
+    .position {
+        padding: 10px 20px;
+        background: lighten(@main-bg-color, 5%);
+    }
 }

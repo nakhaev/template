@@ -1,35 +1,88 @@
 #navigation {
+    float: right;
+    label[for="main-menu-toggle"] {
+        position: absolute;
+        z-index: 30000;
+        display: block;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 42px;
+        border-top: 3px solid @white;
+        border-bottom: 3px solid @white;
+        &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            border-bottom: 3px solid @white;
+        }
+    }
+    #main-menu-toggle {
+        visibility: hidden;
+        margin-top: -1000px;
+        &:checked + .nav-list{
+            top: 0;
+        }
+    }
     .nav-list {
+        text-align: center;
+        background: darken(@main-bg-color, 5%);
+        position: absolute;
+        top: calc(~'-1 * ( 100vh + 100vw )');
+        transition: all 0.5s ease;
+        left: 0;
+        width: 100%;
         padding: 5px;
         margin: 0;
         .nav-item {
             position: relative;
-            display: inline-block;
             text-transform: uppercase;
             padding: 8px 10px;
             a, a:active, a:visited, a:focus {
+                position: relative;
                 text-decoration: none;
-                color: @primary;
+                color: @white;
+                &:after {
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    width: 0;
+                    bottom: 0;
+                    margin-bottom: -5px;
+                    height: 3px;
+                    content: '';
+                    border-bottom: 3px solid @danger;
+                    transition: all 0.3s ease;
+                }
+                &:hover:after {
+                    width: calc(~'100% + 20px');
+                    left: -10px;
+                }
             }
-            &.active:after {
-                width: calc(~'100% + 2px');
-                left: -2px;
+            &.active a:after {
+                width: calc(~'100% + 20px');
+                left: -10px;
             }
-            &:after {
-                display: block;
-                position: absolute;
-                // left: -2px;
-                left: 50%;
-                width: 0;
-                bottom: 0;
-                height: 3px;
-                content: '';
-                border-bottom: 3px solid @danger;
-                transition: all 0.3s ease;
-            }
-            &:hover:after {
-                width: calc(~'100% + 2px');
-                left: -2px;
+        }
+    }
+}
+
+@media ( min-width: @tablet-point ) {
+    #navigation {
+        label[for="main-menu-toggle"] {
+            display: none;
+        }
+        .nav-list {
+            top: 0;
+            text-align: right;
+            padding-top: 10px;
+            font-size: 14px;
+            .nav-item {
+                display: inline-block
             }
         }
     }

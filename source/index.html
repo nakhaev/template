@@ -18,12 +18,13 @@
             <a href="#"class="logo"></a>
         </div>
         <nav id="navigation" class="floated">
+            <label for="main-menu-toggle"></label>
+            <input type="checkbox" name="togle-button" id="main-menu-toggle">
             <ul class="nav-list">
-                <li class="nav-item active"> <a href="#">Menu item</a> </li>
-                <li class="nav-item"> <a href="#">Menu item</a> </li>
-                <li class="nav-item"> <a href="#">Menu item</a> </li>
-                <li class="nav-item"> <a href="#">Menu item long</a> </li>
-                <li class="nav-item"> <a href="#">Menu item</a> </li>
+                <li class="nav-item active"> <a href="#">Обзор</a> </li>
+                <li class="nav-item"> <a href="#">Аварии</a> </li>
+                <li class="nav-item"> <a href="#">Статистика</a> </li>
+                <li class="nav-item"> <a href="#">Управление</a> </li>
             </ul>
         </nav>
     </header>
@@ -35,29 +36,26 @@
         </label>
         <input type="checkbox" name="togle-button" id="action-menu-toggle">
         <ul class="action-menu">
-            <li><button type="button" name="button" class="btn btn-small btn-success btn-block">connect</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-danger btn-block">break</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">some action</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">some action</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-primary btn-block">primary</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-danger btn-block">danger</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-success btn-block">success</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-link btn-block">link</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-success btn-block">Сделать хорошо</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Вова</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Учи</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Новые</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Технологии</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-success btn-block">Beer</button></li>
-            <li><button type="button" name="button" class="btn btn-small btn-danger btn-block">Vodka</button></li>
-            <li><a type="button" name="button" class="btn btn-small btn-link btn-block">Salo</a></li>
-            <li><button type="button" name="button" class="btn btn-small btn-success btn-block"><span class="text-lowercase">Кнопка из &lt;button&gt;</span></button></li>
-            <li><a type="button" name="button" class="btn btn-small btn-success btn-block"><span class="text-lowercase">Кнопка из &lt;a&gt;</a></span></a></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Цех №1</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Цех №2</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Цех №3</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-success btn-block">Склад</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Цех №4</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Цех №5</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-danger btn-block">Котельная</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-link btn-block">Охрана</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Гараж</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Зона погрузки</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Офис</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Бухгалтерия</button></li>
+            <li><button type="button" name="button" class="btn btn-small btn-regular btn-block">Столовая</button></li>
+            <li><a href="#" class="btn btn-small btn-success btn-block">Тех этаж</a></li>
 
         </ul>
     </aside>
     <!-- main -->
     <main id="main" class="clearfix">
+        <div class="position">Цех №5</div>
         <div class="content clearfix">
             <div class="data">
                 <div class="text-danger">text-danger</div>
@@ -71,145 +69,127 @@
                 <div class="text-black">text-black</div>
                 <div class="text-gray">text-gray</div>
                 <div class="text-center">
-                    <!-- <table>
+                    <p>Температура</p>
+                    <table class='table'>
                         <thead>
                             <tr>
-                                <th>header</th>
-                                <th>header</th>
-                                <th>header</th>
-                                <th>header</th>
-                                <th>header</th>
+                                <th>Датчики</th>
+                                <th>Текущая</th>
+                                <th>MIN</th>
+                                <th>MAX</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 1</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 2</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 3</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 4</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 5</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 6</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 7</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                                <td>value</td>
-                            </tr>
-                            <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 8</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
-                                <td>value</td>
+                                <td>Sensor 9</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                             <tr>
-                                <td>parameter name</td>
+                                <td>Sensor 10</td>
                                 <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 11</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 12</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 13</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 14</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 15</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 16</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 17</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                            <tr>
+                                <td>Sensor 18</td>
                                 <td>value</td>
                                 <td>value</td>
                                 <td>value</td>
                             </tr>
                         </tbody>
-                    </table> -->
+                    </table>
                 </div>
             </div>
             <div class="visualization">
