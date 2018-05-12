@@ -3,9 +3,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
+    color: lighten(@gray, 15%);
     @media ( min-width: @tablet-point ) { width: 50%; margin: auto; }
     border-collapse: collapse;
     & tr, & td {
-        border: 1px solid @white;
+        border: 1px solid @gray;
+    }
+    &.table-block {
+        width: 100%;
     }
 }

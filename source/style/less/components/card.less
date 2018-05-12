@@ -1,0 +1,23 @@
+.card {
+    .box-shadow (0, 0, 10px, 0.5);
+    .border-radius(3px);
+    background: lighten(@main-bg-color, 5%);
+    padding: 10px;
+    float: left;
+    margin: @gutter-width;
+    .card-title {
+        border-bottom: 1px solid @white;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+    }
+    &.card-50 {
+        width: calc(~'100% - @{gutter-width} * 2');
+        @media ( min-width: @tablet-point ) { width: calc(~'50% - @{gutter-width} * 2'); }
+    }
+    &.card-25 {
+        width: calc(~'100% - @{gutter-width} * 2');
+        @media ( min-width: @tablet-point ) { width: calc(~'50% - @{gutter-width} * 2'); }
+        @media ( min-width: @desktop-point ) { width: calc(~'25% - @{gutter-width} * 2'); }
+
+    }
+}
